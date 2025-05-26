@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RHEについて｜RHE</title>
+    <meta name="description" content="ここにサイト説明を入れます">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <header id="header">
+        <div id="headerWrap">
+            <h1><img src="images/logo.png" width="142" height="80" alt="logo"></h1>
+            <nav id="mainnav">
+                <p id="menuWrap"><a id="menu"><span id="menuBtn"></span></a></p>
+                <div class="panel">
+                    <ul>
+                        <li><a href="index.html">RHEとは</a></li>
+                        <li><a href="#sec02">事業内容</a></li>
+                        <li><a href="#sec05">会社概要</a></li>
+                        <li><a href="question.html">お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div id="mainImg">
+            <img src="images/mainImg.jpg" alt="">
+        </div>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const menuBtn = document.querySelector('a#menu');
+          const panel = document.querySelector('.panel');
+          const btnLine = document.querySelector('#menuBtn');
+        
+          if (menuBtn && panel && btnLine) {
+            menuBtn.addEventListener('click', function (e) {
+              e.preventDefault();
+              panel.classList.toggle('open');
+              btnLine.classList.toggle('close');
+            });
+          }
+        });
+    </script>
+        
+      
+    
+    
+        <!-- MESSAGE -->
+        <section id="sec01">
+            <header>
+                <h2><span>～Vision～</span></h2>
+            </header>
+            <div class="inners">自分の人生に夢中になり、夢を追い続けられる力を身につけ<br class="pc">人から憧れられる存在へと成長させる</div>
+            <div class="line"></div>
+            <div class="innerS">
+                目標に対して仲間と一緒に突き進む部活のように、日々夢中になり、ワクワクする挑戦、刺激のある毎日、恥ずかしげもなく語れる夢、自分への誇り株式会社RHEでは、「自分の人生に夢中になり一人ひとりが強い個へ成長」する事にフォーカスしサービスを展開してきました。遊びも仕事も本気で行える自立した人間へ導けると信じサポートをし続けます。
+            </div>
+            <header>
+                <h2><span>～Mission～</span></h2>
+            </header>
+            <div class="inners">あなたが背中を預けられる<br class="sp">人生のパートナーで在り続ける</div>
+            <div class="line"></div>
+            <div class="innerS">
+                「どうせ会社も人も裏切るから信用しない」過去にこう言われて背中を預けて貰えない事がありました。他人や会社を信用できなくなった世の中で背中を預けたいと思ってもらえるような人生のパートナーで在り続ける事こそが私達の使命です。
+            </div>
+        </section>
+        <!-- // MESSAGE -->
+
+        <section class="business-section">
+            <div class="business-header">
+              <h2>
+                <span class="en">Business</span>
+                <span class="jp">RHEの事業</span>
+              </h2>
+            </div>
+        </section>
+          
+    
+        <!-- MESSAGE -->
+        <section id="sec02">
+            <div class="wrap">
+                <p class="bg"><img src="images/sec01.jpg" alt=""></p>
+                <div class="txt">
+                    <div class="vMid">
+                        <h2>通信事業</h2>
+                        <p>主に携帯電話やインターネットなどの通信商材の販売促進を行っております。未経験からでも始められるよう、充実した研修とサポート体制を用意しております。週2日～のアルバイト形式・フルタイム雇用も行っております。</p>
+                    </div>
+                </div>
+            </div>
+            <div id="sec02_02" class="wrap">
+                <p class="bg"><img src="images/sec02.jpg" alt=""></p>
+                <div class="txt">
+                    <div class="vMid">
+                        <h2>コンサルティング事業</h2>
+                        <p>インターネット等を利用した各種Webコンサルティング、インターネット等を利用した教育システムの開発、制作、販売及び運用管理、教育研修並びに人材育成支援コンサルタント業務を行っております。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="wrap">
+                <p class="bg"><img src="images/sec01.jpg" alt=""></p>
+                <div class="txt">
+                    <div class="vMid">
+                        <h2>レンタルスペース事業</h2>
+                        <p>会議、セミナー、研修、教室、講演会など様々な用途にご利用可能な時間貸しのレンタルスペース業を行っております。また、懇親会やパーティー等にもご利用いただけます。</p>
+                    </div>
+                </div>
+            </div>
+            <div id="sec02_02" class="wrap">
+                <p class="bg"><img src="images/sec02.jpg" alt=""></p>
+                <div class="txt">
+                    <div class="vMid">
+                        <h2>プログラミングスクール事業</h2>
+                        <p>プログラミング初心者が、仕事や学業と両立しながら最も効率よく、<br class="pc">確実に学べる環境を提供しています。</p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <a href="pro/index.html" class="btn">料金表はこちら</a>
+            </div>
+        </section>
+        <!-- // MESSAGE -->
+
+
+        <main>
+            <h1>代表あいさつ</h1>
+            <p>
+              平素より格別のご高配を賜り、誠にありがとうございます。<br>
+              私たちRHE株式会社は、「信頼」と「挑戦」を大切に、お客様と社会に貢献できる企業を目指しております。
+              時代の変化に柔軟に対応し、常に成長し続ける企業であるために、全社員一丸となって取り組んでまいります。
+              今後とも変わらぬご支援・ご愛顧を賜りますようお願い申し上げます。
+            </p>
+        
+            <div class="president-info">
+              <img src="images/pre.jpg" alt="社長写真" class="president-photo" />
+              <div>
+                <div class="president-name">代表取締役社長 <br class="sp">上村 亮輝</div>
+              </div>
+            </div>
+        </main>
+    
+    <!-- PROFILE -->
+    <section id="sec05">
+        <div class="title">
+            <h2>COMPANY<br>会社概要</h2>
+        </div>
+        <div class="inner">
+            <ul class="col2">
+                <li>
+                    <dl>
+                        <dt>会社名</dt>
+                        <dd>株式会社RHE</dd>
+                        <dt>代表取締役</dt>
+                        <dd>上村 亮輝</dd>
+                        <dt>住所</dt>
+                        <dd>愛知県名古屋市中区錦1丁目</dd>
+                        <dt>電話番号</dt>
+                        <dd>01234-567-8910</dd>
+                        <dt>メールアドレス</dt>
+                        <dd>XXXXXXXXX@gmail.com</dd>
+                        <dt>設立</dt>
+                        <dd>20XX年X月X日</dd>
+                        <dt>主な取引先</dt>
+                        <dd><p><a href="#" target="_blank">XXX株式会社</a></p><p><a href="#" target="_blank">株式会社XXX商事</a></p><p><a href="#" target="_blank">株式会社(仮)</a></p></dd>
+                    </dl>
+                </li>
+                <li>
+                    <div id="map">
+                        <!-- GOOGLE MAP -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13045.978009004333!2d136.87611881417604!3d35.169225641743964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600376d7c278ed89%3A0xb414b4875b744a10!2zTVlDQUZFIOmMpumAmuOCiuW6lw!5e0!3m2!1sja!2sjp!4v1746846180640!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- // PROFILE -->
+
+
+
+    <footer>
+        <div class="footer">
+          <div class="left">
+            <div class="logo"><span class="orange">R</span>HE<span class="sub"></span></div>
+            <div class="tagline">We're serious about play and work.</div>
+            <div class="address">
+              〒460-0003<br>
+              愛知県名古屋市中区錦1丁目<br>
+              mycafe伏見
+            </div>
+          </div>
+          <div class="right">
+            <ul>
+              <li><a href="#sec01">RHEとは</a></li>
+              <li><a href="#sec02">事業内容</a></li>
+              <li><a href="#sec05">会社概要</a></li>
+              <li><a href="question.html">お問い合わせ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">©2025 株式会社 RHE</div>
+    </footer>
+</body>
+</html>
