@@ -126,10 +126,11 @@ img{
 	height: auto;
 }
 
+
 section{
 	clear:both;
 	padding-top: 70px;
-    margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 section h2{
@@ -387,7 +388,7 @@ main h1 {
     line-height: 0;
     overflow: hidden;
     min-width: 300px;
-    height: 300px;
+    height: 400px;
   }
   
   .bg img {

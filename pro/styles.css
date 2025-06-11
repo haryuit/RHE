@@ -70,7 +70,7 @@ ul {
 }
 
 img{
-	max-width: 100%;
+	/*max-width: 100%;*/
 	height: auto;
   padding-bottom: 50px;
 }
@@ -947,7 +947,7 @@ section {
         }
 
         .yaruki-text {
-            color: #c13ee5;
+            color: #360cef;
             font-weight: bold;
             font-size: 1.1rem;
         }
