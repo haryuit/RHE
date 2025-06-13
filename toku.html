@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特定商取引法に基づく表示 | RHE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #6595fc;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #4b5563;
+            font-size: 0.9rem;
+            padding: 0.5rem 0;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #2563eb;
+        }
+
+        .dropdown-arrow::after {
+            content: '▼';
+            font-size: 0.7rem;
+            margin-left: 0.5rem;
+            color: #9ca3af;
+        }
+
+        .cta-button {
+            background-color: #0ea5e9;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #0284c7;
+        }
+
+        .login-link {
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #8e86f5 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .content-inner {
+            padding: 3rem;
+        }
+
+        .info-section {
+            margin-bottom: 2rem;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .info-value {
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .info-value a {
+            color: #5e8ffa;
+            text-decoration: none;
+        }
+
+        .info-value a:hover {
+            text-decoration: underline;
+        }
+
+        .payment-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .payment-list li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .payment-list li::before {
+            content: '・';
+            position: absolute;
+            left: 0;
+            color: #6b7280;
+        }
+
+        /*フッターCSS*/
+  .footer {
+    background-color: #c5b69c;
+    color: white;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer .left {
+    max-width: 400px;
+  }
+  
+  .footer .logo {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .footer .logo .orange {
+    color: #ff6c2c;
+  }
+
+  .footer .logo {
+    color: #fffcfc;
+  }
+  
+  .footer .tagline {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  .footer .address {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .footer .right ul {
+    list-style: none;
+    padding: 40px;
+    margin: 10px;
+  }
+  
+  .footer .right ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer .right ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .footer .right ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .copyright {
+    background-color: #c5b69c;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 20px;
+  }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .nav-menu {
+                flex-wrap: wrap;
+                gap: 1rem;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .main-content {
+                margin: 2rem 1rem;
+            }
+
+            .content-inner {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .header-container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .mobile-menu {
+                display: block;
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+                color: #4b5563;
+            }
+        }
+
+        @media (min-width: 800) {
+             #footer{
+		        padding: 30px 10px 70px 0;
+	        }
+        }
+
+        /* レスポンシブ対応：スマホ画面向け */
+        @media screen and (max-width: 600px) {
+            .footer .right ul {
+                padding: 20px;
+                margin: 0;
+            }
+
+            .footer .right ul li a {
+                font-size: 14px;
+                white-space: nowrap; /* ←これが改行を防ぐポイント */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>特定商取引法に基づく表示</h1>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-inner">
+            <div class="info-section">
+                <div class="info-label">サービス名称</div>
+                <div class="info-value">RHE</div>
+            </div>
+
+            <div class="info-section">
+                <div class="info-label">事業者名</div>
+                <div class="info-value">株式会社RHE</div>
+            </div>
+
+            <div class="info-section">
+                <div class="info-label">代表者名</div>
+                <div class="info-value">上村亮輝</div>
+            </div>
+
+            <div class="info-section">
+                <div class="info-label">所在地</div>
+                <div class="info-value">愛知県名古屋市中区錦1丁目17-13名興ビルディング3FB6号</div>
+            </div>
+
+            <div class="info-section">
+                <div class="info-label">URL</div>
+                <div class="info-value">
+                    <a href="atodelinkiremasu"></a>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <div class="info-label">E-mail</div>
+                <div class="info-value">rhe.cosulting119@gmail.com</div>
+            </div>
+
+            <div class="info-section">
+                <div class="info-label">業務内容</div>
+                <div class="info-value">オンラインプログラミングスクールの運営</div>
+            </div>
+
+            <div class="info-section">
+                <div class="info-label">運営責任者</div>
+                <div class="info-value">上村亮輝</div>
+            </div>
+
+            <div class="info-section">
+                <div class="info-label">販売価格</div>
+                <div class="info-value">コース制（詳細は弊社の規定によります）</div>
+            </div>
+
+            <div class="info-section">
+                <div class="info-label">お支払い方法</div>
+                <div class="info-value">
+                    <ul class="payment-list">
+                        <li>銀行振込（一括払い）</li>
+                        <li>クレジットカード支払い</li>
+                        <li>ローン支払い</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <div class="info-label">お支払い時期</div>
+                <div class="info-value">
+                    <ul class="payment-list">
+                        <li>銀行振込：ご請求より1週間以内</li>
+                        <li>クレジットカード支払い：購入時</li>
+                        <li>ローン支払い：審判に契約締結後、毎月指定日に決済</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <div class="info-label">サービス料金以外の必要料金</div>
+                <div class="info-value">別途5500円/月</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+          <div class="left">
+            <div class="logo"><span class="orange">R</span>HE<span class="sub"></span></div>
+            <div class="tagline">We're serious about play and work.</div>
+            <div class="address">
+              〒460-0003<br>
+              愛知県名古屋市中区錦1丁目17-13<br>名興ビルディング3FB6号
+            </div>
+          </div>
+          <div class="right">
+            <ul>
+              <li><a href="index.html">RHEとは</a></li>
+              <li><a href="index.html">事業内容</a></li>
+              <li><a href="index.html">会社概要</a></li>
+              <li><a href="https://form.run/@RHE-FnukarG7vnS6kp0lwkBc">お問い合わせ</a></li>
+              <li><a href="toku.html">特定商取引法に基づく表示</a></li>
+              <li><a href="terms.html">利用規約</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">©2025 株式会社 RHE</div>
+    </footer>
+</body>
+</html>

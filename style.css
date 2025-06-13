@@ -1074,3 +1074,16 @@ input[type="submit"] {
 		padding: 0 20px;
 	}
 }
+
+/* レスポンシブ対応：スマホ画面向け */
+        @media screen and (max-width: 600px) {
+            .footer .right ul {
+                padding: 20px;
+                margin: 0;
+            }
+
+            .footer .right ul li a {
+                font-size: 14px;
+                white-space: nowrap; /* ←これが改行を防ぐポイント */
+            }
+        }

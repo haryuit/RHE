@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用規約 | RHE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #4b5563;
+            font-size: 0.9rem;
+            padding: 0.5rem 0;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #2563eb;
+        }
+
+        .dropdown-arrow::after {
+            content: '▼';
+            font-size: 0.7rem;
+            margin-left: 0.5rem;
+            color: #9ca3af;
+        }
+
+        .cta-button {
+            background-color: #0ea5e9;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #0284c7;
+        }
+
+        .login-link {
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .content-inner {
+            padding: 3rem;
+        }
+
+        .terms-intro {
+            margin-bottom: 2.5rem;
+            color: #4b5563;
+            line-height: 1.8;
+        }
+
+        .article {
+            margin-bottom: 3rem;
+        }
+
+        .article-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .article-content {
+            color: #4b5563;
+        }
+
+        .article-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+        }
+
+        .article-number {
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+
+        .sub-item {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .sub-item-label {
+            font-weight: 500;
+            color: #374151;
+            margin-bottom: 0.3rem;
+        }
+
+        .sub-item-content {
+            color: #6b7280;
+            margin-bottom: 0.8rem;
+        }
+
+        /*フッターCSS*/
+  .footer {
+    background-color: #c5b69c;
+    color: white;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer .left {
+    max-width: 400px;
+  }
+  
+  .footer .logo {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .footer .logo .orange {
+    color: #ff6c2c;
+  }
+
+  .footer .logo {
+    color: #fffcfc;
+  }
+  
+  .footer .tagline {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  .footer .address {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .footer .right ul {
+    list-style: none;
+    padding: 40px;
+    margin: 10px;
+  }
+  
+  .footer .right ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer .right ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .footer .right ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .copyright {
+    background-color: #c5b69c;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 20px;
+  }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .nav-menu {
+                flex-wrap: wrap;
+                gap: 1rem;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .main-content {
+                margin: 2rem 1rem;
+            }
+
+            .content-inner {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .header-container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .mobile-menu {
+                display: block;
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+                color: #4b5563;
+            }
+        }
+
+        @media (min-width: 800) {
+             #footer{
+		        padding: 30px 10px 70px 0;
+	        }
+        }
+
+        /* レスポンシブ対応：スマホ画面向け */
+        @media screen and (max-width: 600px) {
+            .footer .right ul {
+                padding: 20px;
+                margin: 0;
+            }
+
+            .footer .right ul li a {
+                font-size: 14px;
+                white-space: nowrap; /* ←これが改行を防ぐポイント */
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>利用規約</h1>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-inner">
+            <div class="terms-intro">
+                この利用規約（以下「本規約」といいます。）は、株式会社RHE（以下「当社」といいます。）が提供するプログラミングレッスンに関するすべてのサービス（以下「本サービス」といいます。）の利用に関して、ユーザーに同意していただく必要のある事項を記載しています。ユーザーが本サービスを利用される前に、本規約をご確認いただき、同意の上でご利用ください。なお、本規約については、ユーザーが利用登録した時点で同意されたものとさせていただきますので、ご利用の前によくお読みください。
+            </div>
+
+            <article class="article">
+                <h2 class="article-title">第1条（総則）</h2>
+                <div class="article-content">
+                    <div class="article-item">
+                        <div class="article-number">1.</div>
+                        <div>ユーザーは、本規約に従って本サービスを利用するものとし、本規約に同意しない限り本サービスを利用できません。また、本サービスに関して当社が当社のウェブサイト（そのドメインが「rhe.jp」である当社が運営する本サービスに関するウェブサイトをいいます。以下同じとします。）明示する利用規約、プライバシーポリシー、その他の利用条件（以下「個別規約」といいます。）上その他において配信する文書等に規定する内容（以下「個別規約」といいます。）については、当該個別規約のドメインを含みます。）をいいます。）上その他において配信する文書等に規定する内容（以下「個別規約」といいます。）は、当該ユーザーの同意を得ることなく一部を構成するものとします。個別規約と本規約の内容が矛盾・抵触する場合は、別段の定めがない限り当該個別規約が優先されるものとします。</div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-number">2.</div>
+                        <div>所定の方法にてユーザーが本規約に同意して利用登録を完了した時点で、当該ユーザーと当社との間で、本規約を内容とするサービスの利用契約（以下「サービス利用契約」といいます。）が成立します。</div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-number">3.</div>
+                        <div>ユーザーは、サービス利用契約の成立後、当社の定める利用料金の支払いを当社が確認した時点から、本サービス上の利用を開始することができます（ただし、第7条で定める無料カウンセリングを除きます。）。</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article">
+                <h2 class="article-title">第2条（規約変更）</h2>
+                <div class="article-content">
+                    <div class="article-item">
+                        <div class="article-number">1.</div>
+                        <div>当社は、以下のいずれかに該当する場合には、当社の裁量にて本規約及び本サービスに関する個別規約の内容を変更又は追加（以下「変更等」といいます。）できるものとします。</div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（1）</div>
+                            <div class="sub-item-content">本規約又は個別規約の変更等が、ユーザーの一般の利益に適合するとき。</div>
+                        </div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（2）</div>
+                            <div class="sub-item-content">本規約又は個別規約の変更等が、ユーザーがサービス利用契約を締結した目的に反せず、かつ、変更等の必要性、変更等の内容の相当性、変更等の内容その他の変更等に係る事情に照らして合理的なものであるとき。</div>
+                        </div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-number">2.</div>
+                        <div>当社は、本規約又は個別規約を変更した場合には、変更後の本規約又は個別規約の効力発生日までに、ユーザーに当該変更内容を適当な方法で通知又は当社のウェブサイトにおいて掲示するものとし、変更後の本規約又は個別規約の効力発生日以降に、ユーザーが本サービスを利用した場合又は当社の定める期間内にサービス利用契約の解除手続きをとらなかった場合には、ユーザーは、本規約又は個別規約の変更等に同意したものとみなします。</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article">
+                <h2 class="article-title">第3条（利用登録）</h2>
+                <div class="article-content">
+                    <div class="article-item">
+                        <div class="article-number">1.</div>
+                        <div>本サービスの利用希望者は、本規約を遵守することに同意し、当社の定める方法に従い情報を当社に提供することにより、利用登録の申請をすることができます。ただし申請者があっても、当社は、自らの裁量により、当該申請者を承認するか否かを決定することができ、その理由を開示いたします。</div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-number">2.</div>
+                        <div>利用希望者は、前項に基づく登録の申請にあたり、以下の各号のいずれかの事由について虚偽・問題の上で申請されればならないものとします。</div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（1）</div>
+                            <div class="sub-item-content">本サービスのレッスン等確保のため必要な管理やソフトウェアのインストール等を行うこと</div>
+                        </div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（2）</div>
+                            <div class="sub-item-content">通信環境について本サービスの利用に支障がないこと</div>
+                        </div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-number">3.</div>
+                        <div>当社は、第1項に基づき登録を申請した者が、以下の各号のいずれかの事由に該当する場合は、登録を拒否することがあります。</div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（1）</div>
+                            <div class="sub-item-content">登録申請にあたって当社に提供された情報の全部又は一部につき、虚偽、誤り又は記載漏れがあった場合</div>
+                        </div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（2）</div>
+                            <div class="sub-item-content">登録申請者が申請したクレジットカード等が無効であった場合</div>
+                        </div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（3）</div>
+                            <div class="sub-item-content">過去に当社との契約に違反したことを理由として登録を取り消された者である場合</div>
+                        </div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（4）</div>
+                            <div class="sub-item-content">反社会的勢力等（暴力団、暴力団員、右翼団体、反社会的勢力、その他これに準ずる者を意味します。以下同じとします。）である、又は資金提供その他を通じて反社会的勢力等の維持、運営若しくは経営に協力若しくは関与する等反社会的勢力等との何らかの交流若しくは関与を行っていると当社が判断した場合</div>
+                        </div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（5）</div>
+                            <div class="sub-item-content">その他、当社が登録を適当でないと判断した場合</div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="article">
+                <h2 class="article-title">第4条（料金および支払方法）</h2>
+                <div class="article-content">
+                    <div class="article-item">
+                        <div class="article-number">1.</div>
+                        <div>ユーザーは、本サービスの有料部分の対価として、当社が別途定め、本ウェブサイトに表示する利用料金を、当社が指定する方法により支払うものとします。</div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-number">2.</div>
+                        <div>ユーザーが利用料金の支払を遅滞した場合には、ユーザーは年14.6％の割合による遅延損害金を支払うものとします。</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article">
+                <h2 class="article-title">第5条（禁止事項）</h2>
+                <div class="article-content">
+                    <div class="article-item">
+                        <div class="article-number">1.</div>
+                        <div>ユーザーは、本サービスの利用にあたり、以下の行為をしてはなりません。</div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（1）</div>
+                            <div class="sub-item-content">法令または公序良俗に違反する行為</div>
+                        </div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（2）</div>
+                            <div class="sub-item-content">犯罪行為に関連する行為</div>
+                        </div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（3）</div>
+                            <div class="sub-item-content">当社、本サービスの他のユーザー、または第三者のサーバーまたはネットワークの機能を破壊したり、妨害したりする行為</div>
+                        </div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（4）</div>
+                            <div class="sub-item-content">当社のサービスの運営を妨害するおそれのある行為</div>
+                        </div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（5）</div>
+                            <div class="sub-item-content">他のユーザーに関する個人情報等を収集または蓄積する行為</div>
+                        </div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（6）</div>
+                            <div class="sub-item-content">不正アクセスをし、またはこれを試みる行為</div>
+                        </div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（7）</div>
+                            <div class="sub-item-content">他のユーザーに成りすます行為</div>
+                        </div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（8）</div>
+                            <div class="sub-item-content">当社のサービスに関連して、反社会的勢力に対して直接または間接に利益を供与する行為</div>
+                        </div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（9）</div>
+                            <div class="sub-item-content">その他、当社が不適切と判断する行為</div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article">
+                <h2 class="article-title">第6条（本サービスの提供の停止等）</h2>
+                <div class="article-content">
+                    <div class="article-item">
+                        <div class="article-number">1.</div>
+                        <div>当社は、以下のいずれかの事由があると判断した場合、ユーザーに事前に通知することなく本サービスの全部または一部の提供を停止または中断することができるものとします。</div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（1）</div>
+                            <div class="sub-item-content">本サービスにかかるコンピュータシステムの保守点検または更新を行う場合</div>
+                        </div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（2）</div>
+                            <div class="sub-item-content">地震、落雷、火災、停電または天災などの不可抗力により、本サービスの提供が困難となった場合</div>
+                        </div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（3）</div>
+                            <div class="sub-item-content">コンピュータまたは通信回線等が事故により停止した場合</div>
+                        </div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（4）</div>
+                            <div class="sub-item-content">その他、当社が本サービスの提供が困難と判断した場合</div>
+                        </div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-number">2.</div>
+                        <div>当社は、本サービスの提供の停止または中断により、ユーザーまたは第三者が被ったいかなる不利益または損害についても、一切の責任を負わないものとします。</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article">
+                <h2 class="article-title">第7条（利用制限および登録抹消）</h2>
+                <div class="article-content">
+                    <div class="article-item">
+                        <div class="article-number">1.</div>
+                        <div>当社は、ユーザーが以下のいずれかに該当する場合には、事前の通知なく、ユーザーに対して、本サービスの全部もしくは一部の利用を制限し、またはユーザーとしての登録を抹消することができるものとします。</div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（1）</div>
+                            <div class="sub-item-content">本規約のいずれかの条項に違反した場合</div>
+                        </div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（2）</div>
+                            <div class="sub-item-content">登録事項に虚偽の事実があることが判明した場合</div>
+                        </div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（3）</div>
+                            <div class="sub-item-content">料金等の支払債務の不履行があった場合</div>
+                        </div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（4）</div>
+                            <div class="sub-item-content">当社からの連絡に対し、一定期間返答がない場合</div>
+                        </div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（5）</div>
+                            <div class="sub-item-content">本サービスについて、最後にご利用された日から一定期間利用がない場合</div>
+                        </div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（6）</div>
+                            <div class="sub-item-content">その他、当社が本サービスの利用を適当でないと判断した場合</div>
+                        </div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-number">2.</div>
+                        <div>当社は、本条に基づき当社が行った行為によりユーザーに生じた損害について、一切の責任を負いません。</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article">
+                <h2 class="article-title">第8条（退会）</h2>
+                <div class="article-content">
+                    <div class="article-item">
+                        <div class="article-number">1.</div>
+                        <div>ユーザーは、当社の定める退会手続により、本サービスから退会できるものとします。</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article">
+                <h2 class="article-title">第9条（保証の否認および免責事項）</h2>
+                <div class="article-content">
+                    <div class="article-item">
+                        <div class="article-number">1.</div>
+                        <div>当社は、本サービスに事実上または法律上の瑕疵（安全性、信頼性、正確性、完全性、有効性、特定の目的への適合性、セキュリティなどに関する欠陥、エラーやバグ、権利侵害などを含みます。）がないことを明示的にも黙示的にも保証しておりません。</div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-number">2.</div>
+                        <div>当社は、本サービスに起因してユーザーに生じたあらゆる損害について、当社の故意又は重過失による場合を除き、一切の責任を負いません。ただし、本サービスに関する当社とユーザーとの間の契約（本規約を含みます。）が消費者契約法に定める消費者契約となる場合、この免責規定は適用されません。</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article">
+                <h2 class="article-title">第10条（サービス内容の変更等）</h2>
+                <div class="article-content">
+                    <div class="article-item">
+                        <div class="article-number">1.</div>
+                        <div>当社は、ユーザーに通知することなく、本サービスの内容を変更しまたは本サービスの提供を中止することができるものとし、これによってユーザーに生じた損害について一切の責任を負いません。</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article">
+                <h2 class="article-title">第11条（利用規約の変更）</h2>
+                <div class="article-content">
+                    <div class="article-item">
+                        <div class="article-number">1.</div>
+                        <div>当社は以下の場合には、ユーザーの個別の同意を要せず、本規約を変更することができるものとします。</div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（1）</div>
+                            <div class="sub-item-content">本規約の変更がユーザーの一般の利益に適合するとき。</div>
+                        </div>
+                        <div class="sub-item">
+                            <div class="sub-item-label">（2）</div>
+                            <div class="sub-item-content">本規約の変更が本サービス利用契約の目的に反せず、かつ、変更の必要性、変更後の内容の相当性その他の変更に係る事情に照らして合理的なものであるとき。</div>
+                        </div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-number">2.</div>
+                        <div>当社はユーザーに対し、前項による本規約の変更にあたり、事前に、本規約を変更する旨及び変更後の本規約の内容並びにその効力発生時期を通知いたします。</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article">
+                <h2 class="article-title">第12条（個人情報の取扱い）</h2>
+                <div class="article-content">
+                    <div class="article-item">
+                        <div class="article-number">1.</div>
+                        <div>当社は、本サービスの利用によって取得する個人情報については、当社「プライバシーポリシー」に従い適切に取り扱うものとします。</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article">
+                <h2 class="article-title">第13条（通知または連絡）</h2>
+                <div class="article-content">
+                    <div class="article-item">
+                        <div class="article-number">1.</div>
+                        <div>ユーザーと当社との間の通知または連絡は、当社の定める方法によって行うものとします。当社は、ユーザーから、当社が別途定める方式に従った変更届け出がない限り、現在登録されている連絡先が有効なものとみなして当該連絡先へ通知または連絡を行い、これらは、発信時にユーザーへ到達したものとみなします。</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article">
+                <h2 class="article-title">第14条（権利義務の譲渡の禁止）</h2>
+                <div class="article-content">
+                    <div class="article-item">
+                        <div class="article-number">1.</div>
+                        <div>ユーザーは、当社の書面による事前の承諾なく、利用契約上の地位または本規約に基づく権利もしくは義務を第三者に譲渡し、または担保に供することはできません。</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article">
+                <h2 class="article-title">第15条（適用法・裁判管轄）</h2>
+                <div class="article-content">
+                    <div class="article-item">
+                        <div class="article-number">1.</div>
+                        <div>本規約の解釈にあたっては、日本法を適用するものとします。</div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-number">2.</div>
+                        <div>本サービスに関して紛争が生じた場合には、当社の本店所在地を管轄する裁判所を専属的合意管轄とします。</div>
+                    </div>
+                </div>
+            </article>
+
+            <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e5e7eb; color: #6b7280; text-align: center;">
+                <p>以上</p>
+                <p style="margin-top: 1rem;">制定日：2025年6月13日</p>
+                <p>最終改訂日：2025年6月13日</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+          <div class="left">
+            <div class="logo"><span class="orange">R</span>HE<span class="sub"></span></div>
+            <div class="tagline">We're serious about play and work.</div>
+            <div class="address">
+              〒460-0003<br>
+              愛知県名古屋市中区錦1丁目17-13<br>名興ビルディング3FB6号
+            </div>
+          </div>
+          <div class="right">
+            <ul>
+             <li><a href="index.html">RHEとは</a></li>
+              <li><a href="index.html">事業内容</a></li>
+              <li><a href="index.html">会社概要</a></li>
+              <li><a href="https://form.run/@RHE-FnukarG7vnS6kp0lwkBc">お問い合わせ</a></li>
+              <li><a href="toku.html">特定商取引法に基づく表示</a></li>
+              <li><a href="terms.html">利用規約</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">©2025 株式会社 RHE</div>
+    </footer>
+</body>
+</html>
